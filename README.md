@@ -48,3 +48,12 @@ terraform apply -input=false -auto-approve
 ```
 9. Congratulations, your Azure VM has been created
 ![AzureVM](images/AzureVM.png)
+### **Housekeeping**
+1. Destroy Terraform
+```
+terraform destroy -input=false -auto-approve
+```
+2. Delete Azure rbac role
+```
+az ad sp delete --id yourappId
+```
