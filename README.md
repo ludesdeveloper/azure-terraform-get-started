@@ -4,7 +4,7 @@
 2. [Azure CLI logged in](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
 3. [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 ### **How To**
-> In this example we will using Azure rbac to authenticate our terraform
+> In this example we will using Azure **rbac** to authenticate our terraform
 1. Use this command to get your subscription id
 ```
 az account list --output table
