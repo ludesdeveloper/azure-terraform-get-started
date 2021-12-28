@@ -31,22 +31,26 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/your_subs
   "tenant": "---"
 }
 ```
-6. Create new file with name **terraform.tfvars**, write information below inside that file
+6. Create new file with name **terraform.tfvars**
+```
+touch terraform.tfvars
+```
+7. Write information below inside terraform.tfvars file 
 ```
 subscription_id = "your_subscription_id"
 client_id       = "appId"
 client_secret   = "password"
 tenant_id       = "tenant"
 ```
-7. Init Terraform
+8. Init Terraform
 ```
 terraform init
 ```
-8. Apply Terraform
+9. Apply Terraform
 ```
 terraform apply -input=false -auto-approve
 ```
-9. Congratulations, your Azure VM has been created
+10. Congratulations, your Azure VM has been created
 ![AzureVM](images/AzureVM.png)
 ### **Housekeeping**
 1. Destroy Terraform
