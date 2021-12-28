@@ -23,4 +23,18 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/your_subs
   "tenant": "---"
 }
 ```
-
+4. Create new file with name **terraform.tfvars**, write information below inside that file
+```
+subscription_id = "your_subscription_id"
+client_id       = "appId"
+client_secret   = "password"
+tenant_id       = "tenant"
+```
+5. Init Terraform
+```
+terraform init
+```
+6. Apply Terraform
+```
+terraform apply -input=false -auto-approve
+```
