@@ -46,3 +46,5 @@ terraform init
 ```
 terraform apply -input=false -auto-approve
 ```
+9. Congratulations, your Azure VM has been created
+![AzureVM](images/AzureVM.png)
