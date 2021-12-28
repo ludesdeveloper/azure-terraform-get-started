@@ -5,15 +5,24 @@
 3. [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 ### **How To**
 > In this example we will using Azure **rbac** to authenticate our terraform
-1. Use this command to get your subscription id
+> [Several ways to login azure via terraform](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret)
+1. Clone repository
+```
+git clone https://github.com/ludesdeveloper/azure-terraform-get-started.git
+```
+2. Change directory
+```
+cd azure-terraform-get-started
+```
+3. Use this command to get your subscription id
 ```
 az account list --output table
 ```
-2. Use this command to create rbac role(replace "your_subscription_id" with yours)
+4. Use this command to create rbac role(replace "your_subscription_id" with yours)
 ```
 az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/your_subscription_id"
 ```
-3. Here is output for rbac, save **appId**, **password**, and **tenant**
+5. Here is output for rbac, save **appId**, **password**, and **tenant**
 ```
 {
   "appId": "---",
@@ -23,18 +32,18 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/your_subs
   "tenant": "---"
 }
 ```
-4. Create new file with name **terraform.tfvars**, write information below inside that file
+6. Create new file with name **terraform.tfvars**, write information below inside that file
 ```
 subscription_id = "your_subscription_id"
 client_id       = "appId"
 client_secret   = "password"
 tenant_id       = "tenant"
 ```
-5. Init Terraform
+7. Init Terraform
 ```
 terraform init
 ```
-6. Apply Terraform
+8. Apply Terraform
 ```
 terraform apply -input=false -auto-approve
 ```
