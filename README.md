@@ -4,8 +4,7 @@
 2. [Azure CLI logged in](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
 3. [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 ### **How To**
-> In this example we will using Azure **rbac** to authenticate our terraform
-> [Several ways to login azure via terraform](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret)
+> In this example we will using Azure **rbac** to authenticate our terraform. [Several ways to login azure via terraform](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret)
 1. Clone repository
 ```
 git clone https://github.com/ludesdeveloper/azure-terraform-get-started.git
